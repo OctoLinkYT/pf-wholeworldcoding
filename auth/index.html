@@ -37,7 +37,7 @@
   <script>
 const queryString = window.location.search;
 const urlParams = new URLSearchParams(queryString);
-const redir = urlParams.get('redir')
+const redir = urlParams.get('url')
 localStorage.setItem("auth", "0");
 localStorage.getItem("auth");
     document.getElementById('submitBtn').onclick = function() {
