@@ -38,13 +38,14 @@
 const queryString = window.location.search;
 const urlParams = new URLSearchParams(queryString);
 const redir = urlParams.get('redir')
-
+localStorage.setItem("auth", "0");
+localStorage.getItem("auth");
     document.getElementById('submitBtn').onclick = function() {
       var code = document.getElementById('codeInput').value;
       var specifiedCode = '0923840'; // Replace with your actual code
       if(code === specifiedCode) {
-        alert('Access Granted');
-        // Redirect to your site's main page or perform other actions
+        localStorage.setItem("auth", "1");
+        window.open(redir);
       } else {
         alert('Access Denied');
       }
