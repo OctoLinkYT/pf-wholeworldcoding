@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Phoenix Feather AUth</title>
+<style>
+  body, html {
+    height: 100%;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+  }
+  #loginBox {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  #codeInput {
+    padding: 10px;
+    margin-bottom: 10px;
+  }
+  #submitBtn {
+    padding: 10px 20px;
+  }
+</style>
+</head>
+<body>
+  <div id="loginBox">
+    <p>Oops! Before we let you continue this action, we need to make sure you have a valid copy of the book. Enter the code on the back of your book below:</p>
+    <input type="password" id="codeInput" placeholder="Enter Code">
+    <button id="submitBtn">Enter</button>
+  </div>
+
+  <script>
+    document.getElementById('submitBtn').onclick = function() {
+      var code = document.getElementById('codeInput').value;
+      var specifiedCode = '0923840'; // Replace with your actual code
+      if(code === specifiedCode) {
+        alert('Access Granted');
+        // Redirect to your site's main page or perform other actions
+      } else {
+        alert('Access Denied');
+      }
+    };
+  </script>
+</body>
+</html>
