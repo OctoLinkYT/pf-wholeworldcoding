@@ -45,7 +45,7 @@ localStorage.getItem("auth");
       var specifiedCode = '0923840'; // Replace with your actual code
       if(code === specifiedCode) {
         localStorage.setItem("auth", "1");
-        window.open(redir);
+        window.location.href = redir;
       } else {
         alert('Access Denied');
       }
